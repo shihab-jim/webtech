@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Donor Information Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      padding: 20px;
+    }
+
+    h1 {
+      color: red;
+      font-size: 24px;
+      margin-top: 40px;
+    }
+
+    form {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: auto;
+    }
+
+    label {
+      display: inline-block;
+      width: 200px;
+      margin-bottom: 10px;
+      vertical-align: top;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      width: calc(100% - 220px);
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    textarea {
+      width: calc(100% - 220px);
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-left: 10px;
+      margin-right: 5px;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .submit-buttons {
+      margin-top: 30px;
+    }
+
+    .submit-buttons input {
+      padding: 10px 20px;
+      margin-right: 10px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .submit-buttons input[type="reset"] {
+      background-color: #6c757d;
+    }
+
+    .submit-buttons input:hover {
+      opacity: 0.9;
+    }
+
+    #message {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="donorForm">
+    <h1>Donor Information</h1>
+
+    <label>First name:</label>
+    <input type="text" name="first_name"><br>
+
+    <label>Last name:</label>
+    <input type="text" name="last_name"><br>
+
+    <label>Company:</label>
+    <input type="text" name="company"><br>
+
+    <label>Address 1:</label>
+    <input type="text" name="address1"><br>
+
+    <label>Address 2:</label>
+    <input type="text" name="address2"><br>
+
+    <label>City:</label>
+    <input type="text" name="city"><br>
+
+    <label>State:</label> <br>
+    <select name="state">
+      <option value="">Select a State</option>
+      <option value="DHA">Dhaka</option>
+      <option value="CTG">Chittagong</option>
+      <option value="SLT">Sylhet</option>
+    </select><br>
+
+    <label>Zip Code:</label>
+    <input type="text" name="zipcode"><br>
+
+    <label>Country:</label> <br>
+    <select name="country">
+      <option value="">Select a Country</option>
+      <option value="BD">Bangladesh</option>
+    </select><br>
+
+    <label>Phone:</label>
+    <input type="text" name="phone"><br>
+
+    <label>Fax:</label>
+    <input type="text" name="fax"><br>
+
+    <label>Email:</label>
+    <input type="text" name="email"><br>
+
+    <label>Donation Amount:</label>
+    <input type="radio" name="donation" value="None">None
+    <input type="radio" name="donation" value="$50">$50
+    <input type="radio" name="donation" value="$75">$75
+    <input type="radio" name="donation" value="$100">$100<br>
+
+    <label>Other Amount $:</label>
+    <input type="text" name="other_amount"><br>
+
+    <label>Recurring Donation:</label>
+    <input type="checkbox" name="recurring"> I am interested in giving on a regular basis<br><br>
+
+    <label>Monthly Credit Card $:</label>
+    <input type="text" name="monthly_amount">
+    <label>For</label>
+    <input type="text" name="months">
+    <label>Months</label><br>
+
+    <div class="section">
+      <h1>Honorarium and Memorial Donation</h1>
+
+      <label>I would like to make this donation:</label>
+      <input type="radio" name="honor" value="honor">To Honor
+      <input type="radio" name="honor" value="memory">In Memory of<br><br>
+
+      <label>Name:</label>
+      <input type="text" name="honor_name"><br>
+
+      <label>Acknowledge Donation to:</label>
+      <input type="text" name="acknowledge_to"><br>
+
+      <label>Address:</label>
+      <input type="text" name="ack_address"><br>
+
+      <label>City:</label>
+      <input type="text" name="ack_city"><br>
+
+      <label>State:</label> <br>
+      <select name="ack_state">
+        <option value="">Select a State</option>
+        <option value="DHA">Dhaka</option>
+        <option value="CTG">Chittagong</option>
+        <option value="SLT">Sylhet</option>
+      </select><br>
+
+      <label>Zip:</label>
+      <input type="text" name="ack_zip"><br>
+    </div>
+
+    <div class="section">
+      <h1>Additional Information</h1>
+
+      <label>Name for publication:</label>
+      <input type="text" name="pub_name"><br>
+
+      <input type="checkbox" name="anonymous"> I would like my gift to remain anonymous<br>
+      <input type="checkbox" name="matching_gift"> My employer offers a matching gift program. I will mail the form<br>
+      <input type="checkbox" name="no_thanks"> Please save cost by not mailing a thank you letter<br><br>
+
+      <label for="comments">Comments:</label>
+      <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+      <label>How may we contact you?</label><br>
+      <input type="checkbox" name="contact" value="Email">Email
+      <input type="checkbox" name="contact" value="Postal">Postal Mail
+      <input type="checkbox" name="contact" value="Telephone">Telephone
+      <input type="checkbox" name="contact" value="Fax">Fax<br><br>
+
+      <label>Receive newsletters via:</label>
+      <input type="checkbox" name="newsletter" value="Email">Email
+      <input type="checkbox" name="newsletter" value="Postal">Postal Mail<br><br>
+
+      <input type="checkbox" name="volunteer"> I would like information about volunteering<br>
+    </div>
+
+    <div class="submit-buttons">
+      <input type="submit" value="Continue">
+      <input type="reset" value="Reset">
+    </div>
+
+    <p id="message"></p>
+  </form>
+
+  <script>
+    const form = document.getElementById("donorForm");
+    const message = document.getElementById("message");
+
+    function showMessage(text, color = 'red') {
+      message.textContent = text;
+      message.style.color = color;
+    }
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const requiredFields = [
+        "first_name", "last_name", "email", "address1", "city", "state", "zipcode", "country"
+      ];
+
+      for (let fieldName of requiredFields) {
+        const field = form.elements[fieldName];
+        if (!field || field.value.trim() === "") {
+          showMessage(`Please fill out the ${fieldName.replace("_", " ")} field.`);
+          field.focus();
+          return;
+        }
+      }
+
+      const email = form.elements["email"].value;
+      const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+      if (!emailPattern.test(email)) {
+        showMessage("Please enter a valid email address.");
+        return;
+      }
+
+      const zip = form.elements["zipcode"].value;
+      if (isNaN(zip) || zip.length < 4) {
+        showMessage("Please enter a valid zip code.");
+        return;
+      }
+
+      showMessage("Form submitted successfully! Redirecting...", "green");
+
+      const formData = new FormData(form);
+      for (let [key, value] of formData.entries()) {
+        console.log(`${key}: ${value}`);
+      }
+
+      setTimeout(() => {
+        window.location.href = "thankyou.html"; 
+      }, 2000);
+    });
+
+    
+  </script>
+
+</body>
+</html>
